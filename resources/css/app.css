@@ -1,0 +1,163 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+    /* Brand colours */
+    --color-navy:       #1a3a6e;
+    --color-navy-dark:  #0f2349;
+    --color-navy-light: #2563eb;
+    --color-teal:       #0d9488;
+    --color-teal-light: #14b8a6;
+    --color-brand-green:      #16a34a;
+    --color-brand-green-light: #22c55e;
+}
+
+@layer base {
+    html { scroll-behavior: smooth; }
+    body { -webkit-font-smoothing: antialiased; }
+}
+
+@layer components {
+    /* ── Buttons ── */
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-200 cursor-pointer border-0 no-underline;
+    }
+    .btn-primary {
+        background: linear-gradient(135deg, #1a3a6e, #0d9488);
+        @apply text-white shadow-lg shadow-navy/30;
+    }
+    .btn-primary:hover {
+        @apply -translate-y-0.5 shadow-xl shadow-navy/40;
+    }
+    .btn-outline {
+        @apply bg-transparent text-navy border-2 border-navy;
+    }
+    .btn-outline:hover {
+        @apply bg-navy text-white;
+    }
+    .btn-white {
+        @apply bg-white text-navy shadow-lg;
+    }
+    .btn-white:hover {
+        @apply -translate-y-0.5 shadow-xl;
+    }
+    .btn-green {
+        background: linear-gradient(135deg, #16a34a, #22c55e);
+        @apply text-white shadow-lg shadow-brand-green/30;
+    }
+    .btn-green:hover {
+        @apply -translate-y-0.5 shadow-xl shadow-brand-green/40;
+    }
+    .btn-lg {
+        @apply px-8 py-4 text-base;
+    }
+    .btn-sm {
+        @apply px-4 py-2 text-xs;
+    }
+
+    /* ── Service Cards ── */
+    .service-card {
+        @apply bg-white rounded-2xl p-8 border border-gray-200 relative overflow-hidden transition-all duration-300;
+    }
+    .service-card::before {
+        content: '';
+        @apply absolute top-0 left-0 right-0 h-0.5 scale-x-0 origin-left transition-transform duration-300;
+        background: linear-gradient(90deg, #1a3a6e, #0d9488);
+    }
+    .service-card:hover {
+        @apply -translate-y-2 shadow-2xl border-transparent;
+    }
+    .service-card:hover::before {
+        @apply scale-x-100;
+    }
+
+    /* ── Form controls ── */
+    .form-control {
+        @apply w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-gray-700 outline-none transition-all duration-200 text-sm;
+    }
+    .form-control:focus {
+        @apply border-navy bg-white ring-2 ring-navy/10;
+    }
+    .form-control::placeholder {
+        @apply text-gray-300;
+    }
+
+    /* ── Section header ── */
+    .section-label {
+        @apply inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-navy/10 text-navy mb-4;
+    }
+
+    /* ── Feature icon box ── */
+    .icon-box {
+        background: linear-gradient(135deg, #1a3a6e, #0d9488);
+        @apply w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0;
+    }
+    .icon-box svg {
+        @apply w-6 h-6 fill-white;
+    }
+
+    /* ── Alert ── */
+    .alert-success {
+        @apply flex items-center gap-3 px-4 py-3 rounded-lg bg-green-50 text-green-700 border border-green-200 text-sm font-medium;
+    }
+    .alert-error {
+        @apply text-red-600 text-xs mt-1;
+    }
+}
+
+/* ── Hero gradient overlay ── */
+.hero-bg {
+    background: linear-gradient(135deg, #0f2349 0%, #1a3a6e 55%, #0d9488 100%);
+}
+
+/* ── Stats gradient text ── */
+.gradient-text {
+    background: linear-gradient(135deg, #1a3a6e, #0d9488);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ── Nav scroll effect ── */
+.nav-scrolled {
+    @apply shadow-lg;
+}
+
+/* ── Process line (desktop) ── */
+.process-line::after {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: 55%;
+    right: -55%;
+    height: 2px;
+    background: linear-gradient(90deg, #1a3a6e, #0d9488);
+    z-index: 0;
+}
+
+/* ── Scroll reveal ── */
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+[data-reveal].revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── Contact info card gradient ── */
+.contact-card-bg {
+    background: linear-gradient(145deg, #1a3a6e, #0d9488);
+}
+
+/* ── CTA section ── */
+.cta-bg {
+    background: linear-gradient(135deg, #0f2349, #1a3a6e 50%, #0d9488);
+}
