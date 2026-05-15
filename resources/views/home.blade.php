@@ -17,7 +17,7 @@
             {{-- Badge --}}
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm text-white text-xs font-semibold tracking-widest uppercase mb-8">
                 <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                Serving Greater London
+                Serving the United Kingdom
             </div>
 
             <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight mb-6">
