@@ -21,7 +21,7 @@
             </div>
 
             <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight mb-6">
-                London's Trusted<br>
+                England's Trusted<br>
                 <span class="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">Renovation</span><br>
                 Specialists
             </h1>
@@ -247,7 +247,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             @php
             $testimonials = [
-                ['S', 'Sarah M.', 'Islington', 'Painting & Plastering', 'Absolutely brilliant work. The team transformed our living room in two days. Couldn\'t be happier with the finish — highly recommend Renova LDN!'],
+                ['S', 'Sarah M.', 'Nottingham', 'Painting & Plastering', 'Absolutely brilliant work. The team transformed our living room in two days. Couldn\'t be happier with the finish — highly recommend Renova LDN!'],
                 ['J', 'James K.', 'Hackney', 'Tiling & Flooring', 'Professional, punctual and tidy. The tiling in our bathroom is immaculate. Will definitely use them again for our kitchen renovation.'],
                 ['A', 'Amira T.', 'Clapham', 'Garden Fence & Gardening', 'Fantastic service from start to finish. The garden fence is exactly what we wanted, and they left the garden looking spotless. 5 stars!'],
             ];
