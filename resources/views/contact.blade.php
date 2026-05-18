@@ -38,7 +38,7 @@
                         </div>
                         <div>
                             <strong class="block text-xs font-bold uppercase tracking-widest text-white/60 mb-1">Phone</strong>
-                            <span class="text-sm">{{ $s_phone }}</span>
+                            <a href="tel:{{ preg_replace('/[^+\d]/', '', $s_phone) }}" class="text-sm hover:underline">{{ $s_phone }}</a>
                         </div>
                     </div>
 
